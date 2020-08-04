@@ -9,6 +9,7 @@ import injectStyles from "./styles";
 
 const cache = new InMemoryCache();
 const link = new HttpLink({
+  headers: { authorization: localStorage.getItem("token") },
   uri: "http://localhost:4000/",
 });
 
